@@ -30,6 +30,38 @@ const message=loginUserMessage()//if we dont pass any argument it will use defau
 console.log(message);
 
 
+function calculatePrice(...num1){//passing values using rest operator
+    return num1//it returns value in an array
+}
+
+console.log(calculatePrice(200,300,400));
+
+
+//passing object as argument
+const user={
+    username:"sujal",
+    price:199
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+}
+
+// handleObject(user)
+handleObject({
+    username:"sahil",
+    price:99
+})
+
+
+//passing array as argument
+const myArray=[12,23,43,56]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myArray));
+
+
 
 
 
