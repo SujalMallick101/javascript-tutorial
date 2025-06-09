@@ -1,0 +1,53 @@
+#grey{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: gray;
+}
+
+#red{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: red;
+}
+
+#blue{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+#yellow{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: yellow;
+}
+
+.canvas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    padding: 10px;
+}
+
+.span-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
