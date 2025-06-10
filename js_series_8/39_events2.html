@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h1>chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    const saySujal = function () {
+        console.log("sujal");
+    }
+    const changeText=function(){
+        document.querySelector('h1').innerHTML="best js series"
+    }
+    const changeMe=setTimeout(changeText, 2000)//execute only once after the timeout
+    document.querySelector('#stop').addEventListener('click',function(e){
+        clearTimeout(changeMe)
+        console.log('Stopped');
+        
+    })
+
+
+
+</script>
+
+</html>
