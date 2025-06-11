@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<style>
+    #my-div {
+        height: 200px;
+        width: 200px;
+        border: 2px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #body {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        margin: 10px;
+    }
+    .avatar{
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+<body id="body" style="background-color: #212121; color: white;">
+    <div id="my-div">
+
+    </div>
+</body>
+<script>
+    const url = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest()
+    const div = document.getElementById('my-div')
+    xhr.open('GET', url)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            div.innerHTML=`
+            <img src="${data.avatar_url}" alt="avatar" class="avatar">
+            <h2>${data.name}</h2>
+            <div class="followers">Followers: ${data.followers}</div>
+            ` 
+        }
+    }
+    xhr.send()
+    
+</script>
+
+</html>
