@@ -36,9 +36,9 @@
 </body>
 <script>
     const url = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest()
+    const xhr = new XMLHttpRequest()//create an object
     const div = document.getElementById('my-div')
-    xhr.open('GET', url)
+    xhr.open('GET', url)//open request
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
         if (xhr.readyState === 4) {
@@ -51,7 +51,7 @@
             ` 
         }
     }
-    xhr.send()
+    xhr.send()//send the request
     
 </script>
 
