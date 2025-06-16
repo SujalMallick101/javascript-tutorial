@@ -1,5 +1,5 @@
-let myName="hitesh     "
-String.prototype.trueLength=function(){
+let myName = "hitesh     "
+String.prototype.trueLength = function () {
     console.log(`${this}`);
     console.log(`True length is: ${this.trim().length}`);
 }
@@ -60,5 +60,5 @@ const TASupport = {
 Teacher.__proto__ = User
 
 //modern syntax
-Object.setPrototypeOf(TeachingSupport,Teacher)
+Object.setPrototypeOf(TeachingSupport, Teacher)
 
